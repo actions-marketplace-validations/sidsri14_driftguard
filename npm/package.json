@@ -1,0 +1,36 @@
+{
+  "name": "driftguard-ci",
+  "version": "0.3.0",
+  "description": "Sub-second CI guard for environment drift and AI prompt output contracts.",
+  "main": "bin/driftguard.js",
+  "bin": {
+    "driftguard-ci": "./bin/driftguard.js",
+    "driftguard": "./bin/driftguard.js"
+  },
+  "scripts": {
+    "test": "node bin/driftguard.js --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sidsri14/driftguard.git"
+  },
+  "keywords": [
+    "ci",
+    "environment-variables",
+    "env-drift",
+    "schema",
+    "llm",
+    "ai-contracts",
+    "github-action",
+    "driftguard"
+  ],
+  "author": "Siddharth Srivastava <sidsri1502@gmail.com> (https://github.com/sidsri14)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sidsri14/driftguard/issues"
+  },
+  "homepage": "https://github.com/marketplace/actions/driftguard-ci-guard",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
