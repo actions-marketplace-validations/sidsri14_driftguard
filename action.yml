@@ -9,7 +9,7 @@ inputs:
   version:
     description: 'DriftGuard release version to run'
     required: false
-    default: 'v0.3.0'
+    default: 'v1'
   since:
     description: 'Git revision/branch to diff against (e.g. origin/main)'
     required: false

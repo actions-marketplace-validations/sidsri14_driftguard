@@ -1,5 +1,9 @@
 # DriftGuard
 
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-DriftGuard%20CI%20Guard-blue?logo=github&style=flat-square)](https://github.com/marketplace/actions/driftguard-ci-guard)
+[![Release](https://img.shields.io/github/v/release/sidsri14/driftguard?style=flat-square)](https://github.com/sidsri14/driftguard/releases/tag/v1)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+
 DriftGuard catches missing environment variables and broken AI output contracts before merge.
 
 See the [engineering case study](docs/portfolio-case-study.md) for architecture,
