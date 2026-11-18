@@ -22,6 +22,19 @@ Add DriftGuard to your GitHub Actions workflow in 3 lines:
 
 DriftGuard will automatically download the precompiled binary (< 1s), scan changed source files against your deployment manifests (`.env.example`, `docker-compose.yml`, `k8s/*.yaml`, `vercel.json`), validate any prompt golden fixtures against schemas, and post a sticky failure report directly to the pull request.
 
+## Production Adopters & Live Dogfooding
+
+DriftGuard CI Guard is dogfooded and passing across production repositories in Rust, Node.js, and TypeScript:
+
+| Repository | Tech Stack | Production Guardrail | Live CI Status |
+| :--- | :--- | :--- | :--- |
+| [`sidsri14/stack-intercept`](https://github.com/sidsri14/stack-intercept) | Rust / Tokio | Reverse proxy environment contracts & Prometheus ports | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+| [`sidsri14/streaming-lookback-masker`](https://github.com/sidsri14/streaming-lookback-masker) | Rust / SIMD | Lookback ring-buffer sanitizer configuration | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+| [`sidsri14/resilient-ai-worker-kit`](https://github.com/sidsri14/resilient-ai-worker-kit) | Node.js / BullMQ | Redis & LLM token budget kill-switch contracts | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+| [`sidsri14/otari-agent-sentinel`](https://github.com/sidsri14/otari-agent-sentinel) | TypeScript | Mozilla Otari gateway multi-agent budget guardrails | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+| [`sidsri14/paypal-scopeguard`](https://github.com/sidsri14/paypal-scopeguard) | Node.js / Express | PayPal sandbox OAuth & intent policy guardrails | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+| [`sidsri14/solana-dex-analytics`](https://github.com/sidsri14/solana-dex-analytics) | TypeScript | Solana RPC and AMM bonding curve environments | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
+
 ## 30-second quickstart
 
 ```bash
