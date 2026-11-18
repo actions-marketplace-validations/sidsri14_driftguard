@@ -66,14 +66,25 @@ runs:
       shell: bash
       run: |
         CMD="driftguard check --markdown"
+        SINCE_FLAG=""
         if [ -n "${{ inputs.since }}" ]; then
-          CMD="$CMD --since ${{ inputs.since }}"
+          SINCE_FLAG="--since ${{ inputs.since }}"
         elif [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-          CMD="$CMD --since origin/$GITHUB_BASE_REF"
+          SINCE_FLAG="--since origin/$GITHUB_BASE_REF"
         fi
 
-        if [ -n "${{ inputs.env-scope }}" ]; then
-          CMD="$CMD --env-scope ${{ inputs.env-scope }}"
+        SCOPE="${{ inputs.env-scope }}"
+        if [ -n "$SINCE_FLAG" ]; then
+          CMD="$CMD $SINCE_FLAG"
+          if [ -n "$SCOPE" ]; then
+            CMD="$CMD --env-scope $SCOPE"
+          fi
+        else
+          if [ "$SCOPE" = "changed" ]; then
+            CMD="$CMD --env-scope all"
+          elif [ -n "$SCOPE" ]; then
+            CMD="$CMD --env-scope $SCOPE"
+          fi
         fi
 
         echo "Executing: $CMD"
