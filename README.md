@@ -5,6 +5,19 @@ DriftGuard catches missing environment variables and broken AI output contracts 
 See the [engineering case study](docs/portfolio-case-study.md) for architecture,
 validation evidence, scope boundaries, and a resume-ready project summary.
 
+## GitHub Action Quickstart
+
+Add DriftGuard to your GitHub Actions workflow in 3 lines:
+
+```yaml
+- name: Run DriftGuard
+  uses: sidsri14/driftguard@v1
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+DriftGuard will automatically download the precompiled binary (< 1s), scan changed source files against your deployment manifests (`.env.example`, `docker-compose.yml`, `k8s/*.yaml`, `vercel.json`), validate any prompt golden fixtures against schemas, and post a sticky failure report directly to the pull request.
+
 ## 30-second quickstart
 
 ```bash
