@@ -35,6 +35,21 @@ DriftGuard CI Guard is dogfooded and passing across production repositories in R
 | [`sidsri14/paypal-scopeguard`](https://github.com/sidsri14/paypal-scopeguard) | Node.js / Express | PayPal sandbox OAuth & intent policy guardrails | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
 | [`sidsri14/solana-dex-analytics`](https://github.com/sidsri14/solana-dex-analytics) | TypeScript | Solana RPC and AMM bonding curve environments | [![DriftGuard CI Guard](https://img.shields.io/badge/DriftGuard-CI%20Guard%20Passed-blue)](https://github.com/marketplace/actions/driftguard-ci-guard) |
 
+## Instant Run via npx (Zero Setup Required)
+
+Run DriftGuard in any repository without compiling Rust:
+
+```bash
+# Run contract check in current repository
+npx driftguard-ci check
+
+# Run preflight diagnostics
+npx driftguard-ci doctor
+
+# Initialize driftguard.toml configuration
+npx driftguard-ci init
+```
+
 ## 30-second quickstart
 
 ```bash
